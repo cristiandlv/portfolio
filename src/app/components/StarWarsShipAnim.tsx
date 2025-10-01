@@ -25,8 +25,8 @@ export default function StarWarsShipAnim() {
 
 
   // Trayectoria diagonal realista
-  const pathX = ['-10vw', '5vw', '25vw', '50vw', '75vw', '100vw', '120vw'];
-  const pathY = ['10vh', '15vh', '20vh', '25vh', '30vh', '35vh', '40vh'];
+  const pathX = ['-5vw', '2vw', '20vw', '50vw', '80vw', '98vw', '105vw'];
+  const pathY = ['14vh', '18vh', '22vh', '26vh', '30vh', '34vh', '38vh'];
   const pathRotate = [12, 8, 4, 0, -2, 2, -6];
 
 
