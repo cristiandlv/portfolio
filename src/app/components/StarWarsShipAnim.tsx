@@ -25,8 +25,9 @@ export default function StarWarsShipAnim() {
 
 
   // Trayectoria diagonal realista
-  const pathX = ['-5vw', '2vw', '20vw', '50vw', '80vw', '98vw', '105vw'];
-  const pathY = ['14vh', '18vh', '22vh', '26vh', '30vh', '34vh', '38vh'];
+  // Trayectoria segura: cruza el centro y nunca sale del viewport
+  const pathX = ['-40px', '0vw', '25vw', '50vw', '75vw', '100vw', 'calc(100vw + 40px)'];
+  const pathY = ['10vh', '12vh', '14vh', '16vh', '18vh', '20vh', '22vh'];
   const pathRotate = [12, 8, 4, 0, -2, 2, -6];
 
 
@@ -41,7 +42,7 @@ export default function StarWarsShipAnim() {
 
 
   return (
-  <div className="absolute left-0 top-0 w-full h-full z-50 pointer-events-none" style={{overflow:'visible'}}>
+  <div className="absolute left-0 top-0 w-full h-full z-[60] pointer-events-none" style={{overflow:'visible'}}>
       <motion.div
         initial={false}
         animate={{
@@ -58,7 +59,7 @@ export default function StarWarsShipAnim() {
           times: [0, 0.18, 0.38, 0.62, 0.82, 1],
         }}
   style={{ width: shipSize.width, height: shipSize.height }}
-        className="relative"
+  className="relative"
       >
         <Image
           src={STARSHIP_SRC}
