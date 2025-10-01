@@ -24,11 +24,10 @@ export default function StarWarsShipAnim() {
   if (!mounted) return null;
 
 
-  // Trayectoria diagonal realista
-  // Trayectoria segura: cruza el centro y nunca sale del viewport
-  const pathX = ['-40px', '0vw', '25vw', '50vw', '75vw', '100vw', 'calc(100vw + 40px)'];
-  const pathY = ['10vh', '12vh', '14vh', '16vh', '18vh', '20vh', '22vh'];
-  const pathRotate = [12, 8, 4, 0, -2, 2, -6];
+  // Trayectoria centrada y visible en About
+  const pathX = ['-40px', '0vw', '20vw', '50vw', '80vw', '100vw', 'calc(100vw + 40px)'];
+  const pathY = ['50%', '48%', '46%', '45%', '46%', '48%', '50%'];
+  const pathRotate = [10, 6, 2, 0, -2, 2, 8];
 
 
   // Generar todos los disparos con su delay y ráfaga

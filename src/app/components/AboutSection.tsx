@@ -7,13 +7,13 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="h-auto min-h-[60vh] snap-start flex items-center justify-center bg-[var(--bg)] text-[var(--text)] px-4 py-10 md:py-16 relative overflow-hidden"
+      className="h-auto min-h-[60vh] snap-start flex items-center justify-center bg-[var(--bg)] text-[var(--text)] px-4 py-10 md:py-16 relative overflow-hidden border-none outline-none shadow-none"
     >
       {/* Animación decorativa Star Wars */}
-  <div className="absolute inset-0 w-full h-full z-40">
+  <div className="absolute inset-0 w-full h-full z-40 border-none outline-none shadow-none">
         <StarWarsShipAnim />
       </div>
-  <div className="max-w-5xl w-full grid md:grid-cols-2 gap-8 items-center relative z-0">
+  <div className="max-w-5xl w-full grid md:grid-cols-2 gap-8 items-center relative z-0 border-none outline-none shadow-none">
         {/* Avatar */}
         <div className="flex justify-center">
           <Image
