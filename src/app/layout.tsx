@@ -3,8 +3,8 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
 export const metadata = {
-  title: "Mi Portfolio - Cristian",
-  description: "Portfolio frontend developer - Next.js, Tailwind, API",
+  title: "Crsitiandlv - Portfolio",
+  description: "Portfolio frontend developer - Next.js, Tailwind, JavaScript, React",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
