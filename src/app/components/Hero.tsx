@@ -73,7 +73,7 @@ export default function Hero() {
             >
               Cristian
             </span>
-            . <span className="hidden md:inline">Frontend Developer</span>
+            . <span className="hidden md:inline ">Frontend Developer</span>
           </h1>
           <div className="mt-2 mb-6 min-h-[32px] flex items-center justify-center md:justify-start">
             <TypeAnimation

@@ -26,7 +26,7 @@ export default function HomePage() {
       <AboutSection />
       <ContactSection />
       <footer className="bg-[#0B0B0B] text-white py-6 text-center text-sm">
-        © {new Date().getFullYear()} Cristian de la Vega · Creado con Next.js & Tailwind
+        © {new Date().getFullYear()} Cristian de la Vega · Todos los derechos reservados
       </footer>
       <style jsx global>{`
         @keyframes fadein {

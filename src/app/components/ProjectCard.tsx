@@ -61,7 +61,7 @@ export default function ProjectCard({ project }: { project: (typeof import("../d
             onClick={e => e.stopPropagation()}
           >
             <button
-              className="absolute top-2 right-2 bg-black/60 text-white rounded-full p-2 hover:bg-black/80 transition text-2xl z-10"
+              className="absolute top-2 right-2 bg-black/60 text-white rounded-full p-2 hover:bg-black/80 transition text-2xl z-10 cursor-pointer"
               onClick={() => setShowModal(false)}
               aria-label="Cerrar imagen ampliada"
             >

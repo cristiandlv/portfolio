@@ -11,7 +11,6 @@ export default function TechIcons() {
       <SiJavascript className="text-yellow-400" size={32} title="JavaScript" />
       <SiHtml5 className="text-orange-500" size={32} title="HTML5" />
       <SiCss3 className="text-blue-500" size={32} title="CSS3" />
-      <SiNodedotjs className="text-green-600" size={32} title="Node.js" />
     </div>
   );
 }

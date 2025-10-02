@@ -1,9 +1,6 @@
-// components/Navbar.tsx
 "use client";
-import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Search, Sun, Moon, Menu, X } from "lucide-react";
+import { Sun, Moon, Menu, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export default function Navbar() {
@@ -13,7 +10,6 @@ export default function Navbar() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    // init theme from localStorage or system
     const saved = typeof window !== "undefined" && localStorage.getItem("theme");
     if (saved === "dark" || saved === "light") {
       setTheme(saved);
@@ -41,22 +37,76 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-40 backdrop-blur-md border-b border-gray-200 dark:border-neutral-800">
+    <nav className="fixed top-0 left-0 w-full z-80 backdrop-blur-md border-b border-gray-200 dark:border-neutral-800">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-center ">
-        
-
         <div className="hidden md:flex items-center gap-6 font-medium">
-          <Link href="/">Inicio</Link>
-          <Link href="/about">Sobre</Link>
-          <Link href="/projects">Proyectos</Link>
-          <Link href="/contact">Contacto</Link>
-        
-
-          
-
+          <a
+            href="#hero"
+            className="transition focus:outline-none"
+            onClick={e => {
+              e.preventDefault();
+              const el = document.querySelector('#hero');
+              const nav = document.querySelector('nav');
+              const yOffset = nav ? -nav.offsetHeight : -80;
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+            }}
+          >
+            Inicio
+          </a>
+          <a
+            href="#about"
+            className="transition focus:outline-none"
+            onClick={e => {
+              e.preventDefault();
+              const el = document.querySelector('#about');
+              const nav = document.querySelector('nav');
+              const yOffset = nav ? -nav.offsetHeight : -80;
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+            }}
+          >
+            Sobre
+          </a>
+          <a
+            href="#projects"
+            className="transition focus:outline-none"
+            onClick={e => {
+              e.preventDefault();
+              const el = document.querySelector('#projects');
+              const nav = document.querySelector('nav');
+              const yOffset = nav ? -nav.offsetHeight : -80;
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+            }}
+          >
+            Proyectos
+          </a>
+          <a
+            href="#contact"
+            className="transition focus:outline-none"
+            onClick={e => {
+              e.preventDefault();
+              const el = document.querySelector('#contact');
+              const nav = document.querySelector('nav');
+              const yOffset = nav ? -nav.offsetHeight : -80;
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+            }}
+          >
+            Contacto
+          </a>
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-xl hover:bg-gray-200 dark:hover:bg-neutral-800 transition"
+            className="p-2 rounded-xl hover:bg-gray-200 dark:hover:bg-neutral-800 transition cursor-pointer"
             aria-label="Cambiar tema"
           >
             {theme === "dark" ? (
@@ -66,18 +116,80 @@ export default function Navbar() {
             )}
           </button>
         </div>
-
         <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden p-2 ">
           {menuOpen ? <X /> : <Menu />}
         </button>
       </div>
-
       {menuOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 border-t border-gray-200 dark:border-neutral-800 bg-white dark:bg-gray-900">
-          <Link href="/" onClick={() => setMenuOpen(false)} className="block py-2 font-semibold text-gray-900 dark:text-white">Inicio</Link>
-          <Link href="/projects" onClick={() => setMenuOpen(false)} className="block py-2 font-semibold text-gray-900 dark:text-white">Proyectos</Link>
-          <Link href="/about" onClick={() => setMenuOpen(false)} className="block py-2 font-semibold text-gray-900 dark:text-white">Sobre</Link>
-
+          <a
+            href="#hero"
+            onClick={e => {
+              e.preventDefault();
+              const el = document.querySelector('#hero');
+              const nav = document.querySelector('nav');
+              const yOffset = nav ? -nav.offsetHeight : -80;
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+              setMenuOpen(false);
+            }}
+            className="block py-2 font-semibold text-gray-900 dark:text-white transition focus:outline-none"
+          >
+            Inicio
+          </a>
+          <a
+            href="#projects"
+            onClick={e => {
+              e.preventDefault();
+              const el = document.querySelector('#projects');
+              const nav = document.querySelector('nav');
+              const yOffset = nav ? -nav.offsetHeight : -80;
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+              setMenuOpen(false);
+            }}
+            className="block py-2 font-semibold text-gray-900 dark:text-white transition focus:outline-none"
+          >
+            Proyectos
+          </a>
+          <a
+            href="#about"
+            onClick={e => {
+              e.preventDefault();
+              const el = document.querySelector('#about');
+              const nav = document.querySelector('nav');
+              const yOffset = nav ? -nav.offsetHeight : -80;
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+              setMenuOpen(false);
+            }}
+            className="block py-2 font-semibold text-gray-900 dark:text-white transition focus:outline-none"
+          >
+            Sobre
+          </a>
+          <a
+            href="#contact"
+            onClick={e => {
+              e.preventDefault();
+              const el = document.querySelector('#contact');
+              const nav = document.querySelector('nav');
+              const yOffset = nav ? -nav.offsetHeight : -80;
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+              setMenuOpen(false);
+            }}
+            className="block py-2 font-semibold text-gray-900 dark:text-white transition focus:outline-none"
+          >
+            Contacto
+          </a>
           <div className="mt-2 flex items-center gap-2">
             <input
               value={search}
@@ -88,7 +200,7 @@ export default function Navbar() {
             />
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-xl hover:bg-gray-200 dark:hover:bg-neutral-800 transition"
+              className="p-2 rounded-xl hover:bg-gray-200 dark:hover:bg-neutral-800 transition cursor-pointer"
               aria-label="Cambiar tema"
             >
               {theme === "dark" ? (
